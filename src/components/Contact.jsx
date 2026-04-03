@@ -1,27 +1,32 @@
-import { useState } from 'react'
-
 export default function Contact() {
-  const [hovered, setHovered] = useState(false)
   return (
-    <section id="contact" style={{ padding: '7rem 3rem', background: 'var(--charcoal)' }}>
-      <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.6rem', letterSpacing: '0.45em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '1rem' }}>Contact</p>
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 300, color: 'var(--ivory)', marginBottom: '1rem' }}>Find Your Scent</h2>
-        <p style={{ color: 'var(--ash)', fontSize: '0.85rem', letterSpacing: '0.05em', margin: '1.5rem 0' }}>
-          Inquire about orders, custom sets, or personal consultations.
+    <section id="contact" style={{
+      padding: '8rem 4rem',
+      background: 'linear-gradient(to bottom, var(--obsidian), #0a0806)',
+    }}>
+      <div className="reveal" style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.55rem', letterSpacing: '0.5em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '1.5rem' }}>Contact</p>
+        <h2 style={{
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 200,
+          color: 'var(--ivory)', margin: '2rem 0',
+        }}>Find Your Scent</h2>
+        <p style={{ fontSize: '0.8rem', letterSpacing: '0.1em', color: 'var(--ash)', margin: '1.5rem 0' }}>
+          Inquire about orders, bespoke sets, or personal consultations.
         </p>
         <a href="tel:09562302108" style={{
-          display: 'inline-block', fontFamily: "'Cormorant Garamond', serif",
-          fontSize: '2rem', fontWeight: 300, color: 'var(--gold)', textDecoration: 'none',
-          letterSpacing: '0.1em', paddingBottom: '0.25rem', transition: 'border-color 0.3s',
-          borderBottom: hovered ? '1px solid var(--gold)' : '1px solid rgba(196,164,107,0.3)',
+          display: 'inline-block',
+          fontFamily: "'Cormorant Garamond', serif",
+          fontSize: '2.5rem', fontWeight: 200, color: 'var(--gold)',
+          textDecoration: 'none', letterSpacing: '0.15em',
+          position: 'relative', paddingBottom: '4px',
         }}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
+          onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
+          onMouseLeave={e => e.currentTarget.style.opacity = '1'}
         >
           0956 230 2108
         </a>
-        <p style={{ fontSize: '0.6rem', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'var(--ash)', marginTop: '1.5rem' }}>
+        <p style={{ fontSize: '0.55rem', letterSpacing: '0.4em', textTransform: 'uppercase', color: 'var(--ash)', marginTop: '1.5rem' }}>
           Call or text — we respond within the hour
         </p>
       </div>
